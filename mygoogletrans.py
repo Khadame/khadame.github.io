@@ -6,7 +6,7 @@ import hashlib
 import datetime
 import time
 import feedparser
-from pygtrans import Translator
+from pygtrans import Translate
 from bs4 import BeautifulSoup
 from jinja2 import Template
 import requests
