@@ -9,4 +9,4 @@
  📢查看[ 本页 ](https://rcy1314.github.io/Rss-Translation) 修改自[ rss-translate ](https://github.com/talengu/rss-translate)
 
 ## 已转换翻译源
- - source001 [https://rsshub.app/telegram/channel/Artificial_intelligence_in](https://rsshub.app/telegram/channel/Artificial_intelligence_in) -> [Artificial_intelligence_in](rss/Artificial_intelligence_in.xml)
+ - source001 https://rss-hpoi.vercel.app/hpoi/info/all -> [Artificial_intelligence_in](rss/Artificial_intelligence_in.xml)
