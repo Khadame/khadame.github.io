@@ -6,10 +6,11 @@ import hashlib
 import datetime
 import time
 import feedparser
-from pygtrans import Translate
+from pygtrans import ApiKeyTranslate
 from bs4 import BeautifulSoup
 from jinja2 import Template
 import requests
+client = ApiKeyTranslate(api_key='AIzaSyCnVAOj7gc856BIs7anLpHyycVAkL4eI5k')
 
 def get_md5_value(src):
     _m = hashlib.md5()
@@ -24,7 +25,7 @@ def getTime(e):
     return datetime.datetime(*struct_time[:6])
 
 class GoogleTran:
-    def __init__(self, url, source='auto', target='zh-CN'):
+    def __init__(self, url, source='zh-CN', target='en'):
         self.url = url
         self.source = source
         self.target = target
@@ -35,8 +36,7 @@ class GoogleTran:
         if not content:  # 添加判断，如果内容为空则直接返回
             return ''
         
-        translator = Translate()
-        return translator.translate(content, target_lang=self.target, source_lang=self.source).text
+        return client.translate(content, target_lang=self.target, source_lang=self.source).text
 
     def get_newcontent(self, max_item=10):
         item_set = set()  # 使用集合来去除重复项
@@ -85,8 +85,8 @@ def get_cfg_tra(sec):
     target = ""
     source = ""
     if cc == "auto":
-        source = 'auto'
-        target = 'zh-CN'
+        source = 'zh-CN'
+        target = 'en'
     else:
         source = cc.split('->')[0]
         target = cc.split('->')[1]
