@@ -10,3 +10,5 @@
 
 ## Hosted #1
  - source001 https://rss-hpoi.vercel.app/hpoi/info/all -> [mikudayo feed](rss/mikudayo.xml)
+ - source001 [https://rss-hpoi.vercel.app/hpoi/info/all](https://rss-hpoi.vercel.app/hpoi/info/all) -> [mikudayo.xml](rss/mikudayo.xml.xml)
+ - source001 [https://rss-hpoi.vercel.app/hpoi/info/all](https://rss-hpoi.vercel.app/hpoi/info/all) -> [mikudayo.xml](rss/mikudayo.xml.xml)
