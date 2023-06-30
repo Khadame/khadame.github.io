@@ -10,7 +10,7 @@ from pygtrans import ApiKeyTranslate
 from bs4 import BeautifulSoup
 from jinja2 import Template
 import requests
-client = ApiKeyTranslate(api_key='AIzaSyCnVAOj7gc856BIs7anLpHyycVAkL4eI5k')
+client = ApiKeyTranslate(api_key='secrets.API_KEY')
 
 def get_md5_value(src):
     _m = hashlib.md5()
@@ -36,7 +36,7 @@ class GoogleTran:
         if not content:  # 添加判断，如果内容为空则直接返回
             return ''
         
-        return client.translate(content, target_lang=self.target, source_lang=self.source).text
+        return client.translate(content, target, source).text
 
     def get_newcontent(self, max_item=10):
         item_set = set()  # 使用集合来去除重复项
